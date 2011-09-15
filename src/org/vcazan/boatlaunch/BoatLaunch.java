@@ -17,13 +17,13 @@ public class BoatLaunch extends JavaPlugin {
 	}
     
 	public void onEnable(){
-		log.info("BoatLaunch v0.1 has loaded.");
+		log.info("BoatLaunch v0.2 has loaded.");
 		main();
 
 	}
 	
 	public void onDisable(){
-		log.info("BoatLaunch v0.1 has unloaded.");
+		log.info("BoatLaunch v0.2 has unloaded.");
 	}
 	
 }

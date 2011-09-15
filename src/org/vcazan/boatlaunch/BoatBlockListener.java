@@ -28,13 +28,12 @@ public class BoatBlockListener extends BlockListener{
 		ItemStack dispenseItem = event.getItem();
 		
 		if (dispenseItem.getTypeId() == 333){
-
-			event.setCancelled(true);
 			Block block = event.getBlock();
 			Location under = block.getLocation();
 			under.setY(block.getY()-1);
 			
 			if (checkForWater(block.getLocation()) == true || checkForWater(under) == true){
+				event.setCancelled(true);
 				for(World world : this.plugin.getServer().getWorlds()) {
 					if(world.getBlockAt(block.getLocation()) == block){							world.spawn(spawnBoat, CraftBoat.class); break;
 					}
